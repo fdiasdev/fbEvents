@@ -1,0 +1,11 @@
+{
+    "require" : {
+        "facebook/php-sdk-v4" : "4.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload" : {
+        "psr-0" : { "Ingresse\\" : "src/" }
+    }
+}
