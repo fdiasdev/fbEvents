@@ -7,9 +7,7 @@ dependencies:
     - yes | pecl install mongo
     - echo 'extension="mongo.so"' > ~/.phpenv/versions/$(phpenv global)/etc/conf.d/50-mongo.ini 
     - git clone --depth=1 git://github.com/phalcon/cphalcon.git
-    - ls 
     - cd cphalcon/build && ./install
-    - ls
     - cd ../..
     - touch ~/.phpenv/versions/$(phpenv global)/etc/conf.d/50-phalcon.ini
     - echo 'extension="phalcon.so"' > ~/.phpenv/versions/$(phpenv global)/etc/conf.d/50-phalcon.ini

@@ -30,8 +30,8 @@ class StorageTest extends PHPUnit_Framework_TestCase
     {
         $fbId    = 'fb001';
         $events  = $this->getEvents();
-        $mongo   = new Mongo;
-        $dbTest  = $mongo->selectDb("fbTest");
+        $mongo   = new MongoClient;
+        $dbTest  = $mongo->fbTest;
         $storage = new Ingresse\Service\Storage($dbTest);
 
         $storage->saveEvents($events, $fbId);
@@ -48,8 +48,8 @@ class StorageTest extends PHPUnit_Framework_TestCase
     {
         $fbId    = 'fb001';
         $events  = $this->getEvents();
-        $mongo   = new Mongo;
-        $dbTest  = $mongo->selectDb("fbTest");
+        $mongo   = new MongoClient;
+        $dbTest  = $mongo->fbTest;
         $dbTest->$fbId->batchInsert($events);
         $storage = new Ingresse\Service\Storage($dbTest);
 
