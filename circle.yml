@@ -2,6 +2,10 @@ machine:
   php:
       version: 5.5.11
 
+general:
+  artifacts:
+    - "~/fbEvents/build/coverage"
+
 dependencies:
   pre:
     - yes | pecl install mongo
