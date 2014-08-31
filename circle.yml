@@ -11,6 +11,7 @@ dependencies:
     - cd ../..
     - touch ~/.phpenv/versions/$(phpenv global)/etc/conf.d/50-phalcon.ini
     - echo 'extension="phalcon.so"' > ~/.phpenv/versions/$(phpenv global)/etc/conf.d/50-phalcon.ini
+    - sed -i 's/^;//' ~/.phpenv/versions/$(phpenv global)/etc/conf.d/xdebug.ini
     - sudo service apache2 restart
 
 test:
